@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Amigos del océano | AquaKidi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="icon" href="img/faviconak.svg" type="image/x-icon" /><link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="css/amigos.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+	
+</head>
+
+<body>
+  <div class="bubble-container"></div>
+
+  <header>
+    <div class="logo">
+     <a> <img src="img/Logoblanco.svg" alt="Logo de AquaKidi" href="index.html" /></a>
+    </div>
+    <nav>
+      <ul>
+		<li><a href="index.html">Inicio</a></li>
+        <li><a href="amigos.html">Amigos del océano</a></li>
+        <li><a href="mundos.html">Mundos bajo el agua</a></li>
+        <li><a href="#">A jugar en el mar</a></li>
+        <li><a href="sobreaquakidi.html">Sobre AquaKidi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="amigos-oceano">
+      <h1>Amigos del Océano</h1>
+      <p class="intro">Conoce a algunas de las especies más increíbles que habitan nuestros mares colombianos.</p>
+      <div class="especies-container">
+		 
+        
+		
+        <div class="especie">
+            <img src="img/delfin.jpg" alt="Delfín rosado del Amazonas" class="img-animal">
+            <p class="nombre-animal">Delfín rosado del Amazonas</p>
+            <button class="open-modal" data-animal="delfin">Ver más</button>
+        </div>
+        
+        <div id="modal-delfin" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar-modal">&times;</span>
+                <img src="img/delfin.jpg" alt="Delfín rosado" />
+                <h2>Delfín rosado del Amazonas</h2>
+                <p>Este delfín de agua dulce vive en el río Amazonas. ¡Puede llegar a medir más de 2 metros y su color rosado se vuelve más intenso cuando se emociona!</p>
+            </div>
+        </div>
+
+        <div class="especie">
+    			<img src="img/manati.jpg" alt="Manatí" class="img-animal">
+    			<p class="nombre-animal">Manatí Antillano</p>
+    			<button class="open-modal" data-animal="manati">Ver más</button>
+  			</div>
+			
+			<div id="modal-manati" class="modal">
+  				<div class="modal-contenido">
+    				<span class="cerrar-modal">&times;</span>
+    				<img src="img/manati.jpg" alt="manati" />
+    				<h2>Manatí Antillano</h2>
+    			<p>¡El manatí antillano es como un gran “osito de agua”! Se mueve muy lento y come plantas acuáticas todo el día. Aunque es gigante, ¡es súper tranquilo! Pero necesita nuestra ayuda para seguir viviendo feliz.</p>
+  				</div>
+			</div>
+			
+        
+			<div class="especie">
+    			<img src="img/tortuga.jpg" alt="Tortuga Carey" class="img-animal">
+    			<p class="nombre-animal">Tortuga Carey</p>
+    			<button class="open-modal" data-animal="tortuga">Ver más</button>
+  			</div>
+			
+			<div id="modal-tortuga" class="modal">
+  				<div class="modal-contenido">
+    				<span class="cerrar-modal">&times;</span>
+    				<img src="img/tortuga.jpg" alt="Tortuga" />
+    				<h2>Tortuga Carey</h2>
+    			<p>La tortuga carey es una nadadora increíblemente rápida que vive en los océanos. Su caparazón es tan bonito que parece una obra de arte. ¡Pero cuidado! Está en peligro, y necesitamos ayudarla a seguir nadando por el mar.</p>
+  				</div>
+			</div>
+			
+			
+			<div class="especie">
+    			<img src="img/tiburon.jpg" alt="Tiburon" class="img-animal">
+    			<p class="nombre-animal">Tiburón martillo</p>
+    			<button class="open-modal" data-animal="tiburon">Ver más</button>
+  			</div>
+			
+			<div id="modal-tiburon" class="modal">
+  				<div class="modal-contenido">
+    				<span class="cerrar-modal">&times;</span>
+    				<img src="img/tiburon.jpg" alt="Tiburon" />
+    				<h2>Tiburón martillo</h2>
+    			<p>¡El tiburón martillo parece sacado de una película de ciencia ficción! Su cabeza en forma de T le da una súper visión para explorar los misterios del mar. ¡Es como el detective del océano! Aunque da un poquito de miedo, en realidad, muchos están en peligro… y necesitan héroes como tú para protegerlos.</p>
+  				</div>
+			</div>
+			
+			
+           <div class="especie">
+    			<img src="img/pezleon.jpg" alt="pezleon" class="img-animal">
+    			<p class="nombre-animal">Pez león</p>
+    			<button class="open-modal" data-animal="pezleon">Ver más</button>
+  			</div>
+			
+			<div id="modal-pezleon" class="modal">
+  				<div class="modal-contenido">
+    				<span class="cerrar-modal">&times;</span>
+    				<img src="img/pezleon.jpg" alt="pezleon" />
+    				<h2>Pez león</h2>
+    			<p>¡El pez león parece un pez disfrazado con rayas y espinas! Aunque es muy bonito, tiene veneno en sus aletas, así que es mejor mirarlo de lejos. Es una especie invasora, ¡y está causando problemas en el mar!</p>
+  				</div>
+			</div>
+			
+			
+    
+			 <div class="especie">
+    			<img src="img/estrella.jpg" alt="estrella" class="img-animal">
+    			<p class="nombre-animal">Estrella de mar</p>
+    			<button class="open-modal" data-animal="estrella">Ver más</button>
+  			</div>
+			
+			<div id="modal-estrella" class="modal">
+  				<div class="modal-contenido">
+    				<span class="cerrar-modal">&times;</span>
+    				<img src="img/estrella.jpg" alt="estrella" />
+    				<h2>Estrella de mar</h2>
+    			<p>¡La estrella de mar no tiene cerebro ni sangre, pero puede regenerar sus brazos si los pierde! Parece una estrella del cielo, ¡pero vive en el fondo del mar!</p>
+  				</div>
+			</div>
+			
+			
+        
+			<div class="especie">
+    			<img src="img/caballito.jpg" alt="caballito" class="img-animal">
+    			<p class="nombre-animal">Caballito de mar del Caribe</p>
+    			<button class="open-modal" data-animal="caballito">Ver más</button>
+  			</div>
+			
+			<div id="modal-caballito" class="modal">
+  				<div class="modal-contenido">
+    				<span class="cerrar-modal">&times;</span>
+    				<img src="img/caballito.jpg" alt="caballito" />
+    				<h2>Caballito de mar del Caribe</h2>
+    			<p>¡El caballito de mar del Caribe parece un mini dragón marino! Nada de pie y el papá es quien cuida los huevos. ¡Es pequeñito, pero muy especial en el océano!</p>
+  				</div>
+			</div>
+			
+			
+            <div class="especie">
+    			<img src="img/raya.jpg" alt="raya" class="img-animal">
+    			<p class="nombre-animal">Raya anguila</p>
+    			<button class="open-modal" data-animal="raya">Ver más</button>
+  			</div>
+			
+			<div id="modal-raya" class="modal">
+  				<div class="modal-contenido">
+    				<span class="cerrar-modal">&times;</span>
+    				<img src="img/raya.jpg" alt="raya" />
+    				<h2>Raya anguila</h2>
+    			<p>¡La raya anguila parece una mezcla de mantarraya y serpiente! Tiene un cuerpo largo y se mueve como si bailara en el agua. ¡Es tímida y prefiere esconderse en la arena!</p>
+  				</div>
+			</div>
+			
+			
+       
+			<div class="especie">
+    			<img src="img/pulpo.jpg" alt="pulpo" class="img-animal">
+    			<p class="nombre-animal">Pulpo común</p>
+    			<button class="open-modal" data-animal="pulpo">Ver más</button>
+  			</div>
+			
+			<div id="modal-pulpo" class="modal">
+  				<div class="modal-contenido">
+    				<span class="cerrar-modal">&times;</span>
+    				<img src="img/pulpo.jpg" alt="pulpo" />
+    				<h2>Pulpo común</h2>
+    			<p>¡El pulpo común es un maestro del disfraz! Cambia de color, se esconde en cualquier rincón y tiene ocho brazos súper ágiles. ¡Es tan inteligente que puede abrir frascos!</p>
+  				</div>
+			</div>
+			
+        
+			<div class="especie">
+    			<img src="img/langosta.jpg" alt="langosta" class="img-animal">
+    			<p class="nombre-animal">Langosta espinosa</p>
+    			<button class="open-modal" data-animal="langosta">Ver más</button>
+  			</div>
+			
+			<div id="modal-langosta" class="modal">
+  				<div class="modal-contenido">
+    				<span class="cerrar-modal">&times;</span>
+    				<img src="img/langosta.jpg" alt="langosta" />
+    				<h2>Langosta espinosa</h2>
+    			<p>¡La langosta espinosa parece un robot marino con muchas patas y antenas larguísimas! No tiene pinzas como otras langostas, pero se defiende con sus espinas. ¡Y le encanta esconderse entre las rocas!</p>
+  				</div>
+			</div>
+		 	
+    </div>
+</section>
+		
+	 
+	  
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>Derechos reservados por AquaKidi</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/animales.js"></script>
+	<script src="js/burbujas.js"></script>
+</body>
+</html>
