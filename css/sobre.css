@@ -1,0 +1,273 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Omels';
+  src: url("../fonts/Omels.woff2") format('woff2'),
+       url("../fonts/Omels.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+	font-family: "Quicksand", sans-serif;
+	font-weight: 400;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	animation: moveWater 20s ease-in-out infinite;
+	background-image: url("../img/fondoweb3.jpg");
+}
+.bubble-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.floating-bubble {
+  position: absolute;
+  bottom: -20px;
+  border-radius: 50%;
+  opacity: 0.4;
+  background-color: rgba(173, 216, 230, 0.5);
+  animation: float-up linear infinite;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 240px;
+  height: auto;
+}
+
+nav {
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+nav a {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+nav a:hover {
+  background-color: #0d415d;
+}
+
+.bubble {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(173, 216, 230, 0.6);
+  pointer-events: none;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  box-shadow: 0 0 10px rgba(173, 216, 230, 0.6);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+}
+.sobre-aquakidi {
+  padding: 60px 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  color: #1962ad;
+  text-align: center;
+}
+
+.sobre-aquakidi .contenido h2 {
+  font-family: 'Omels';
+  font-size: 48px;
+  margin-bottom: 20px;
+ color: #9db154;
+}
+
+.sobre-aquakidi .contenido p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+}
+
+.equipo h3,
+.ods h3 {
+  font-family: 'Omels';
+  font-size: 36px;
+  margin: 40px 0 20px;
+	color: #FFFFFF;
+}
+
+.cards-disenadoras {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.disenadora {
+  text-align: center;
+}
+
+.disenadora img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #f6b130;
+  box-shadow: 0 0 12px rgba(0, 194, 255, 0.5);
+  margin-bottom: 10px;
+}
+
+.disenadora img {
+  animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.disenadora p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.contenido-ods {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contenido-ods img {
+  width: 150px;
+  height: auto;
+}
+
+.contenido-ods p {
+  font-size: 18px;
+  max-width: 500px;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  color: #FFFFFF;
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+footer .social a {
+  font-size: 24px;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .social a:hover {
+  color: #008bb5;
+}
+
+@keyframes float-up {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+@keyframes moveWater {
+  0% {
+    background-position: center center;
+  }
+  50% {
+    background-position: center 100%;
+  }
+  100% {
+    background-position: center center;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenido-ods {
+    flex-direction: column;
+  }
+
+  .sobre-aquakidi .contenido h2 {
+    font-size: 36px;
+  }
+
+  .equipo h3,
+  .ods h3 {
+    font-size: 28px;
+  }
+
+  .disenadora img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .sobre-aquakidi .contenido p,
+  .contenido-ods p {
+    font-size: 16px;
+  }
+}

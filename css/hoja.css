@@ -1,0 +1,256 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Omels';
+  src: url("../fonts/Omels.woff2") format('woff2'),
+       url("../fonts/Omels.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url(../img/fondoinicio.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  animation: moveWater 20s ease-in-out infinite;
+}
+
+.bubble-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.floating-bubble {
+  position: absolute;
+  bottom: -20px;
+  border-radius: 50%;
+  opacity: 0.4;
+  background-color: rgba(173, 216, 230, 0.5);
+  animation: float-up linear infinite;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 240px;
+  height: auto;
+}
+
+nav {
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+nav a {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+nav a:hover {
+  background-color: #0d415d;
+}
+
+.bubble {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(173, 216, 230, 0.6);
+  pointer-events: none;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  box-shadow: 0 0 10px rgba(173, 216, 230, 0.6);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+}
+
+.bienvenida h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-family: 'Omels';
+  color: #FFFFFF;
+}
+
+.bienvenida p {
+  font-size: 25px;
+  margin-bottom: 70px;
+  font-weight: 300;
+  font-family: "Quicksand", sans-serif;
+  color: #FFFFFF;
+ 
+}
+
+.bienvenida .boton-animado {
+  margin: 40px;
+  padding: 25px;
+  border: none;
+  background-color: #3a7bbf;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Omels';
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.boton-animado {
+  position: relative;
+  padding: 12px 28px;
+  font-size: 16px;
+  background: #008bb5;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  color: #00c2ff;
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+footer .social a {
+  font-size: 24px;
+  color: #00c2ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .social a:hover {
+  color: #008bb5;
+}
+
+/* Animaciones */
+@keyframes float-up {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+@keyframes moveWater {
+  0% {
+    background-position: center center;
+  }
+  50% {
+    background-position: center 100%;
+  }
+  100% {
+    background-position: center center;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(173, 216, 230, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  }
+}
+
+/* Responsive para pantallas menores a 768px */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .logo img {
+    max-width: 180px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  .bienvenida h1 {
+    font-size: 36px;
+  }
+
+  .bienvenida p {
+    font-size: 18px;
+  }
+
+  .bienvenida button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  footer .social a {
+    font-size: 20px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
