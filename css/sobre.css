@@ -51,6 +51,7 @@ header {
   align-items: center;
   padding: 20px 40px;
   flex-wrap: wrap;
+  position: sticky;
 }
 
 .logo {
